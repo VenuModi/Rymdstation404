@@ -12,4 +12,17 @@ public abstract class CrewMember {
     public String getName() {
         return name;
     }
+
+    public int getEnergy() {
+        return energy;
+    }
+
+    public void lossEnergy(int amount) {
+        energy -= amount;
+
+    }
+
+    public void performTask() {
+
+    }
 }
