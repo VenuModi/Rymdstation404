@@ -16,7 +16,7 @@ public class SpaceStation {
                 case START:
                     System.out.println("Mission starting 3..2...1...LET'S GOOO!!");
                     for (CrewMember crewMember : team) {
-                        System.out.println(crewMember.getName() + "Has " + crewMember.getEnergy());
+                        System.out.println(crewMember.getName() + " has " + crewMember.getEnergy());
                     }
                     break;
                 case OXYGENLOSS:
@@ -35,6 +35,7 @@ public class SpaceStation {
                     System.out.println("You want to enter the lab but the lab is locked.");
                     for (CrewMember crewMember : team) {
                         crewMember.performTask();
+                        crewMember.lossEnergy(30);
                     }
                     break;
 
@@ -57,6 +58,9 @@ public class SpaceStation {
             }
         }
 
+    }
+
+    public void StartMission() {
     }
 
 }

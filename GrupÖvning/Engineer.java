@@ -5,6 +5,9 @@ public class Engineer extends CrewMember implements Repairable {
     }
 
     public void performTask() {
+        lossEnergy(30);
+        System.out.println(name + " has " + getEnergy() + " energy left!");
+
         System.out.println(name + " is checking the machinery.");
     }
 
